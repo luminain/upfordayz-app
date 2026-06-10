@@ -30,7 +30,7 @@ export async function onRequest(context) {
     },
   };
 
-  const { handleDoorDashApiRequest } = await import('../../lib/doordash/handlers.js');
+  const { handleDoorDashApiRequest } = await import('../../../lib/doordash/handlers.js');
   await handleDoorDashApiRequest(req, res, env);
 
   return new Response(responseBody, {
