@@ -1,0 +1,40 @@
+{
+    "name": "GiftCard",
+    "type": "object",
+    "properties": {
+      "amount": {
+        "type": "number"
+      },
+      "recipient_name": {
+        "type": "string"
+      },
+      "recipient_email": {
+        "type": "string"
+      },
+      "sender_name": {
+        "type": "string"
+      },
+      "message": {
+        "type": "string"
+      },
+      "code": {
+        "type": "string"
+      },
+      "status": {
+        "type": "string",
+        "enum": [
+          "active",
+          "redeemed",
+          "expired"
+        ],
+        "default": "active"
+      },
+      "balance": {
+        "type": "number"
+      }
+    },
+    "required": [
+      "amount",
+      "recipient_name"
+    ]
+  }
